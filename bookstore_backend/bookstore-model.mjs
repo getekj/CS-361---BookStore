@@ -41,3 +41,37 @@ const createBook = async (name, author, price, stock, description) => {
     });
     return book.save();
 }
+
+// RETRIEVE models to use for book search functionality and View Catalog page
+// Retrieve all books in collection and return a promise
+const findBooks = async () => {
+    const query = Book.find();
+    return query.exec();
+}
+
+// Retrieve book based on the ID and return a promise.
+const findBookById = async (_id) => {
+    const query = Book.findById(_id);
+    return query.exec();
+}
+
+// REPLACE model for updating books in databse
+const replaceBook = async (_id, name, author, price, stock, description) => {
+    const result = await Book.replaceOne({_id: _id }, {
+        name: name,
+        author: author,
+        price: price,
+        stock: stock,
+        description: description
+    });
+    return result.modifiedCount;
+}
+
+// DELETE model based on ID  
+const deleteById = async (_id) => {
+    const result = await Book.deleteOne({_id: _id});
+    return result.deletedCount;
+};
+
+// Export our variables for use in the controller file.
+export { createBook, findBooks, findBookById, replaceBook, deleteById }
