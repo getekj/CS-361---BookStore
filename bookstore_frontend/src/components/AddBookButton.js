@@ -2,7 +2,9 @@ import React from 'react';
 
 function AddBookButton() {
     return (
-      <button>Add Book</button>
+    <nav className='add_button'>
+        <a href="/addbook">Add Book</a>
+    </nav>
     );
   }
 
