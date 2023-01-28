@@ -13,7 +13,7 @@ function AddBookPage () {
     const addBook = async (e) => {
         const newBook = { name, author, price, stock, description };
         
-        const response = await fetch("/books", {
+        const response = await fetch("http://localhost:3000/books", {
             method: 'POST',
             body: JSON.stringify(newBook),
             headers: {
@@ -35,57 +35,52 @@ function AddBookPage () {
             <fieldset>
                 <legend>Provide details about the book you are adding!</legend>
 
-                <label for="name">Title of Book</label>
+                <label className='name'>Title of Book</label>
                 <input
                     type="text"
-                    minlength="1"
                     value={name}
                     onChange={e => setName(e.target.value)}
                     id="name"
                     required
                 />
 
-                <label for="author">Author of Book</label>
+                <label className='author'>Author of Book</label>
                 <input
                     type="text"
-                    minlength="1"
                     value={author}
                     onChange={e => setAuthor(e.target.value)}
                     id="author"
                     required
                 />
 
-                <label for="price">Price of Book</label>
+                <label className='price'>Price of Book</label>
                 <input
                     type="number"
-                    minlength="1"
                     value={price}
                     onChange={e => setPrice(e.target.value)}
                     id="price"
                     required
                 />
 
-                <label for="stock">Number of Book in Stock</label>
+                <label className='stock'>Number of Book in Stock</label>
                 <input
                     type="number"
-                    minlength="1"
                     value={stock}
                     onChange={e => setStock(e.target.value)}
                     id="stock"
                     required
                 />
 
-                <label for="Description">Brief Description About the Book</label>
+                <label className='description'>Brief Description About the Book</label>
                 <input
                     type="text"
-                    minlength="1"
                     value={description}
                     onChange={e => setDescription(e.target.value)}
                     id="description"
                     required
                 />
 
-                <label for="submit">
+                <label className='submit'>
                     <button
                         type="submit"
                         onClick={addBook}
