@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AddBookPage from './pages/AddBookPage';
 import UpdateBookPage from './pages/UpdateBook';
+import AddOrUpdatePage from './pages/AddOrUpdatePage';
 
 //importing components
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<HomePage/>}/><Route/>
+        <Route path='/addorupdatebook' element={<AddOrUpdatePage/>}/><Route/>
         <Route path="/addbook" element={<AddBookPage/>}/><Route/>
         <Route path="/updatebook" element={<UpdateBookPage/>}/><Route/>
 
