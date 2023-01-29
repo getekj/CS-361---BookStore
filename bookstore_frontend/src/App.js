@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //importing pages
 import HomePage from './pages/HomePage';
 import AddBookPage from './pages/AddBookPage';
-import UpdateBookPage from './pages/UpdateBook';
+import UpdateBookPage from './pages/UpdateBookPage';
 import AddOrUpdatePage from './pages/AddOrUpdatePage';
 
 //importing components
@@ -24,7 +24,7 @@ function App() {
       <Routes>
 
         <Route path="/" element={<HomePage/>}/><Route/>
-        <Route path='/addorupdatebook' element={<AddOrUpdatePage book={book} setBook={setBook}/>}/><Route/>
+        <Route path='/addorupdatebook' element={<AddOrUpdatePage setBook={setBook}/>}/><Route/>
         <Route path="/addbook" element={<AddBookPage book={book}/>}/><Route/>
         <Route path="/updatebook" element={<UpdateBookPage book={book}/>}/><Route/>
 

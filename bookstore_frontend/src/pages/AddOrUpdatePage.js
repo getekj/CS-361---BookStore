@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import AddBookButton from '../components/AddBookButton';
 import BookTable from '../components/BookTable';
 
 function AddOrUpdatePage ( {setBook} ) {
+
+        // use navigate to render new page without user needing to click
+        const navigate = useNavigate();
 
         // Use state to bring in the data
         const [books, setBooks] = useState([]);
@@ -16,13 +20,14 @@ function AddOrUpdatePage ( {setBook} ) {
         
     
         // UPDATE a book
-        const onEditBook = async book => {
+        const onEdit = async book => {
             setBook(book);
+            navigate("/updatebook")
             //history.push("/updatebook");
         }
     
 
-        // LOAD the exercises
+        // LOAD the books
         useEffect(() => {
             loadBooks();
         }, []);
@@ -33,7 +38,7 @@ function AddOrUpdatePage ( {setBook} ) {
         <AddBookButton/>
         <BookTable 
                     books={books} 
-                    onEdit={onEditBook} 
+                    onEdit={onEdit} 
                 />
         </>
     );

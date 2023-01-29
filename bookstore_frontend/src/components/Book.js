@@ -1,5 +1,5 @@
 import React from 'react';
-import UpdateBookButton from './UpdateBookButton';
+import { MdOutlineEdit } from 'react-icons/md';
 
 function Book({ book, onEdit}) {
     return (
@@ -9,7 +9,7 @@ function Book({ book, onEdit}) {
             <td>{book.price}</td>
             <td>{book.stock}</td>
             <td>{book.description}</td>
-            <td><UpdateBookButton onClick={() => onEdit(book)} /></td>
+            <td><MdOutlineEdit onClick={() => onEdit(book)} /></td>
         </tr>
     );
 }
