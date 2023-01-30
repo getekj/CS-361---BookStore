@@ -1,38 +1,338 @@
-.App {
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+          /* Add fonts from the app's server 
+@font-face {                
+  font-family: 'FontName';
+  src: url('FontName.woff2') format('woff2');
+} 
+          */                           
+
+          /* ...or hosted services like Google Fonts  */
+          @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+          
+
+          /*@import '../node_modules/modern-normalize/modern-normalize.css'
+          /* npm install modern-normalize 
+            Resets elements for browser consistancy.  
+            http://nicolasgallagher.com/about-normalize-css/ 
+          */
+
+          /* Component-specific stylesheets, if any 
+@import "component1.css";   
+          */
+
+/*   ----- Variables  -----  */
+:root {
+  --custom-color-green:rgb(26, 83, 92);
+  --custom-color-turquoise:rgb(78, 205, 196);
+  --custom-color-mint:rgb(247, 255, 247);
+  --custom-color-pink:rgb(255, 107, 107);
+  --custom-color-yellow:rgb(254,250,224);
+  --custom-color-dark-red:rgb(221,161,94);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {       /* Can alternatively define in html {} or :root {} */
+  color:var(--custom-color-green);
+  background-color:var(--custom-color-mint);
+  font-family:'DM Sans', sans-serif;
+  font-size:1em;
+  padding:1%;
+  margin:0 auto;
+  min-width:400px;
+  
+  text-align:center;
+}
+
+/* ----- Anchors ----- Text links */
+a {}
+a:link {}
+a:hover {}
+a:active {}
+a:visited {}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  text-align:center;
+  text-decoration:none;
+  background-color:var(--custom-color-yellow);
+  border:2px solid var(--custom-color-yellow);
+  color:rgb(5, 43, 5);
+  font-size:1em;
+  font-weight:bold;
+  line-height:1;
+  margin:auto;
+  padding: 5px 30px 5px 30px;
+  vertical-align:middle;
+}
+nav a {
+  text-decoration:none;
+  background-color:var(--custom-color-yellow);
+  border:2px solid var(--custom-color-yellow);
+  border-radius:10px 10px 10px 10px; 
+  color:rgb(5, 43, 5);
+  font-size:1.5em;
+  font-weight:bold;
+  line-height:1;
+  margin-right:20px;
+  padding: 5px 30px 5px 30px;
+  vertical-align:middle;
+}
+nav a:hover {
+  color:var(--custom-color-green); 
+  background-color:var(--custom-color-yellow);
+  border:2px solid var(--custom-color-yellow);
+  text-align:center;
+  text-decoration:none;
+  font-size:1.5em;
+  font-weight:bold;
+  line-height:1;
+  margin:none;
+  padding: 5px 30px 5px 30px;
+  vertical-align:middle;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  text-align:center;
+  background-color: var(--custom-color-turquoise);
+  color: var(--custom-color-green);
+  border: 2em;
+  font-size: medium;
+  font-weight: 100;
+  margin:1em;
+  padding: 2%;
+}
+main {
+  text-align:center;
+  background-color: var(--custom-color-turquoise);
+  color: var(--custom-color-green);
+  font-size: medium;
+  border: 2em;
+  margin:2em;
+  padding: 2%;
+}
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+    #gallery1 {}
+    #gallery2 {}
+div {}
+aside {}
+footer {
+  text-align:center;
+  /* background-color: var(--custom-color-yellow); */
+  color: var(--custom-color-green);
+  border: 0.5em;
+  font-size: medium;
+  font-weight: 100;
+  margin:1em;
+  padding: 0.5%;
+}
+
+/*  -----  Typography  ----- */
+p {}
+br {}
+ol, ul, dl {}
+li {}
+dt {}
+dd {}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', sans-serif;
+} /* Define consistant font family.*/
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+abbr {}
+acronym {}
+address {}
+blockquote {}
+  q {}
+  cite {}
+em {}
+hr {}
+mark {}
+s {}
+span {}
+strong {}
+sub {}
+sup {}
+time {}
+
+/*  ----- Coding or instructional typography ----- */
+pre {}
+code {}
+kbd {}
+samp {}
+var {}
+del {} 
+ins {}
+
+/*  ----- Table ----- */
+table {
+  border-collapse:collapse;
+  text-align:left;
+  table-layout: auto;
+  border:2px solid var(--custom-color-dark-red);
+  width:95%;
+  margin:0 auto;
+  padding:1%;
+}
+caption {
+  background-color:var(--custom-color-dark-red);  
+  border:2px var(--custom-color-dark-red);  
+  color:var(--custom-color-yellow);
+  font-weight:bold;
+  padding:1% 0;
+}
+thead {}
+tbody {}
+tfoot {}
+tr {
+  border:1px solid var(--custom-color-dark-red);
+  background-color:var(--custom-color-yellow);
+  padding:1%;
+  text-align:center;
+}
+  tr:nth-child(even) {}
+th {
+  border:1px solid var(--custom-color-dark-red);
+  padding:1%;
+}
+td {
+  border:1px solid var(--custom-color-dark-red);
+  background-color:var(--custom-color-yellow);
+  padding:1%;
+  text-align:center;
+}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+
+/*  ----- Form ----- */
+form {
+  padding: 2%;
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 4px;
+}
+fieldset {}
+  legend {}
+label {
+  display:block;
+  margin-top:20px;
+}
+ button {
+  background-color: var(--custom-color-dark-red);
+  border: 1px solid var(--custom-color-dark-red);
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
   text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover,
+button:focus {
+  background-color: var(--custom-color-yellow);
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  input {
+    color:var(--custom-color-green);
+    background-color:whitesmoke;
+    font-family: 'DM Sans', sans-serif;;
+    font-size:1em;
+    border: 1px solid black;
+    margin:0.5em;
+    padding: 1%;
+    border-radius: 4px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  output {}
+  meter {}
+  progress {}
+  select {
+    color:var(--custom-color-green);
+    background-color:var(--custom-color-yellow);
+    font-family: 'DM Sans', sans-serif;
+    font-size:1em;
+    border:1px solid var(--custom-color-yellow);
+    margin:0.5em;
+    padding:1%;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    optgroup {}
+    option {}
+  textarea {}
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
+
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.floatright {}
+.floatleft {}
+.center-middle {}
+
+.ten {}
+.twenty {}
+.thirty {}
+.forty {}
+.fifty {}
+.sixty {}
+.seventy {}
+.eighty {}
+
+.radius {}
+.circle {}
+.boxshadow {}
+.tshadow {} 
+.gradient {}
+.shape {}
+
+@keyframes App-logo {}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {}
+
+

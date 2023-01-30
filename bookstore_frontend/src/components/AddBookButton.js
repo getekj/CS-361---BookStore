@@ -5,7 +5,7 @@ function AddBookButton() {
     return (
       <>
         <Link to="/addbook">
-          <button>Add New Book</button>
+          <button title='Takes you to new page to add a book'>Add New Book</button>
         </Link>
       </>
     );

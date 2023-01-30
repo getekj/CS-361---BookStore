@@ -4,7 +4,7 @@ import Book from './Book';
 function BookTable({ books, onEdit }) {
     return (
         <table id="books">
-            <caption>Click on the icons in the table to delete or edit books</caption>
+            <caption>Click on the icons in the rightmost column to edit book</caption>
             <thead>
                 <tr>
                     <th>Name</th>

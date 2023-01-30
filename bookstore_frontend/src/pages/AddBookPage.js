@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HomeButton from '../components/HomeButton';
 import { Navigate, useNavigate } from 'react-router-dom';
 import BackButton from '../components/BackButton';
+import { MdHelp } from 'react-icons/md';
 
 function AddBookPage () {
 
@@ -35,6 +36,7 @@ function AddBookPage () {
     return (
         <>
         <h1> Add New Entry </h1>
+        <MdHelp title='Type the information about the book in the boxes under each heading'/>
         <form onSubmit={(e) => {e.preventDefault();}}>
             <fieldset>
                 <legend>Provide details about the book you are adding!</legend>
@@ -88,7 +90,8 @@ function AddBookPage () {
                     <button
                         type="submit"
                         onClick={addBook}
-                        id="submit">
+                        id="submit"
+                        title="This action is irreversible">
                         Add</button> to the catalog
                 </label>
 
