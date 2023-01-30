@@ -3,41 +3,45 @@ import HomeButton from '../components/HomeButton';
 import { Navigate, useNavigate } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 
-function AddBookPage () {
+function UpdateBookPage ({book}) {
 
-    const [name, setName] = useState('');
-    const [author, setAuthor] = useState('');
-    const [price, setPrice] = useState('');
-    const [stock, setStock] = useState('');
-    const [description, setDescription] = useState('');
-
+    console.log(`On this update book page book is ${book.name}`);
+    const [name, setName] = useState(book.name);
+    const [author, setAuthor] = useState(book.author);
+    const [price, setPrice] = useState(book.price);
+    const [stock, setStock]   = useState(book.stock);
+    const [description, setDescription]   = useState(book.description);
+    
     let navigate = useNavigate();
 
-    const addBook = async (e) => {
-        const newBook = { name, author, price, stock, description };
-        
-        const response = await fetch("http://localhost:3000/books", {
-            method: 'POST',
-            body: JSON.stringify(newBook),
-            headers: {
-                'Content-Type': 'application/json',
-            },
+    const editBook = async () => {
+        const response = await fetch(`http://localhost:3000/books/${book._id}`, {
+            method: 'PUT',
+            body: JSON.stringify({ 
+                name: name, 
+                author: author,
+                price: price,
+                stock: stock,
+                description: description
+            }),
+            headers: {'Content-Type': 'application/json',},
         });
-        if(response.status === 201) {
-            alert("Successfully added the book!");
-            navigate("/addorupdatebook");
-        } else {
-            alert(`Failed to add book, status code = ${response.status}`);
-        }
-    };
 
+        if (response.status === 200) {
+            alert("Successfully edited book!");
+        } else {
+            const errMessage = await response.json();
+            alert(`Failed to update book. Status ${response.status}. ${errMessage.Error}`);
+        }
+        navigate('/addorupdatebook');
+    }
 
     return (
         <>
-        <h1> Add New Entry </h1>
+        <h1> Update Entry </h1>
         <form onSubmit={(e) => {e.preventDefault();}}>
             <fieldset>
-                <legend>Provide details about the book you are adding!</legend>
+                <legend>Edit the book information!</legend>
 
                 <label className='name'>Title of Book</label>
                 <input
@@ -87,9 +91,9 @@ function AddBookPage () {
                 <label className='submit'>
                     <button
                         type="submit"
-                        onClick={addBook}
+                        onClick={editBook}
                         id="submit">
-                        Add</button> to the catalog
+                        Save</button> updates to the book
                 </label>
 
             </fieldset>
@@ -97,7 +101,9 @@ function AddBookPage () {
         <HomeButton/>
         <BackButton/>
         </>
+
     );
+
 };
 
-export default AddBookPage;
+export default UpdateBookPage;

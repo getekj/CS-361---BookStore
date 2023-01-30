@@ -24,7 +24,6 @@ function AddOrUpdatePage ( {setBook} ) {
         const onEdit = async book => {
             setBook(book);
             navigate("/updatebook")
-            //history.push("/updatebook");
         }
     
 
@@ -35,7 +34,7 @@ function AddOrUpdatePage ( {setBook} ) {
 
     return (
         <>
-        <h1>ADD OR UPDATE PAGE</h1>
+        <h1>Update Catalog</h1>
         <AddBookButton/>
         <BookTable 
                     books={books} 

@@ -5,7 +5,7 @@ import HomeButton from '../components/HomeButton';
 function HomePage () {
     return (
         <>
-        <h1> HELLO THIS IS HOMEPAGE </h1>
+        <h1> Logos BookStore </h1>
         <HomeButton/>
         <UpdateCatalogButton/>
         </>
