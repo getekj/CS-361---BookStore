@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function AddBookButton() {
     return (
-    <nav className='add_button'>
-        <a href="/addbook">Add Book</a>
-    </nav>
+      <>
+        <Link to="/addbook">
+          <button>Add Book</button>
+        </Link>
+      </>
     );
   }
 

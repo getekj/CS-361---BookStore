@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import HomeButton from '../components/HomeButton';
 
 
 function AddBookPage () {
@@ -90,6 +90,7 @@ function AddBookPage () {
 
             </fieldset>
         </form>
+        <HomeButton/>
         </>
     );
 };

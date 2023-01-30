@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function UpdateCatalogButton() {
     return (
-    <nav className='update_catalog_button'>
-        <a href="/addorupdatebook">Update Catalog</a>
-    </nav>
+    <Link to="/addorupdatebook">
+      <button>Update Catalog</button>
+    </Link>
     );
   }
 

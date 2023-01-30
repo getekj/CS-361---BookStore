@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import AddBookButton from '../components/AddBookButton';
 import BookTable from '../components/BookTable';
+import HomeButton from '../components/HomeButton';
 
 function AddOrUpdatePage ( {setBook} ) {
 
@@ -40,6 +41,7 @@ function AddOrUpdatePage ( {setBook} ) {
                     books={books} 
                     onEdit={onEdit} 
                 />
+        <HomeButton/>
         </>
     );
 };
