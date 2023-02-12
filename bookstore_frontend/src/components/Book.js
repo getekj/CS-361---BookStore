@@ -1,7 +1,7 @@
 import React from 'react';
-import { MdOutlineEdit } from 'react-icons/md';
+import { MdOutlineEdit, MdDeleteForever } from 'react-icons/md';
 
-function Book({ book, onEdit}) {
+function Book({ book, onEdit, onDelete}) {
     return (
         <tr>
             <td>{book.name}</td>
@@ -10,6 +10,7 @@ function Book({ book, onEdit}) {
             <td>{book.stock}</td>
             <td>{book.description}</td>
             <td><MdOutlineEdit onClick={() => onEdit(book)} /></td>
+            <td><MdDeleteForever onClick={() => onDelete(book._id)}/></td>
         </tr>
     );
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import UpdateCatalogButton from '../components/UpdateCatalogButton';
 import HomeButton from '../components/HomeButton';
 import bookshelf from '../components/bookshelf.jpg';
+import ActivityButton from '../components/ActivityButton';
+import ViewTableButton from '../components/ViewTableButton';
 
 function HomePage () {
     return (
@@ -10,6 +12,8 @@ function HomePage () {
         <img src={bookshelf} alt="bookshelf"/>
         <HomeButton/>
         <UpdateCatalogButton/>
+        <ActivityButton/>
+        <ViewTableButton/>
         </>
 
     );

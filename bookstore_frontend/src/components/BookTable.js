@@ -1,7 +1,7 @@
 import React from 'react';
 import Book from './Book';
 
-function BookTable({ books, onEdit }) {
+function BookTable({ books, onEdit, onDelete }) {
     return (
         <table id="books">
             <caption>Click on the icons in the rightmost column to edit book</caption>
@@ -13,6 +13,7 @@ function BookTable({ books, onEdit }) {
                     <th>Stock</th>
                     <th>Description</th>
                     <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@ function BookTable({ books, onEdit }) {
                         book={book} 
                         key={i}
                         onEdit={onEdit} 
+                        onDelete={onDelete}
                     />
                     )}
                 

@@ -26,6 +26,18 @@ function AddOrUpdatePage ( {setBook} ) {
             navigate("/updatebook")
         }
     
+        // Delete a book
+        const onDelete = async _id => {
+            const response = await fetch(`http://localhost:3000/books/${_id}`, { method: 'DELETE' });
+            if (response.status === 204) {
+                const getResponse = await fetch('/books');
+                const books = await getResponse.json();
+                setBooks(books);
+            } else {
+                console.error(`Failed to delete book with _id = ${_id}, status code = ${response.status}`)
+            }
+            navigate("/")
+        }
 
         // LOAD the books
         useEffect(() => {
@@ -38,7 +50,8 @@ function AddOrUpdatePage ( {setBook} ) {
         <AddBookButton/>
         <BookTable 
                     books={books} 
-                    onEdit={onEdit} 
+                    onEdit={onEdit}
+                    onDelete={onDelete} 
                 />
         <HomeButton/>
         </>
