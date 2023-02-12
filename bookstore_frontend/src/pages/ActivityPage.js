@@ -36,7 +36,7 @@ function ActivityPage () {
 
     return (
         <>
-        <h1> Hi this is activity page</h1>
+        <h1>Welcome to the Activities Page</h1>
         <form onSubmit={(e) => {e.preventDefault();}}>
             <fieldset>
                 <legend>Enter Text Below to Analyze The Reading Grade Level</legend>
