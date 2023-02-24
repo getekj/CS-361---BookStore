@@ -4,6 +4,7 @@ import { useState } from 'react';
 function ActivityPage () {
 
     const [reading_text, setReadingText] = useState('');
+    const [reading_grade_level, setReadingGradeLevel] = useState('')
 
     const submitReadingText = async () => {
         console.log(reading_text)
@@ -20,6 +21,8 @@ function ActivityPage () {
             console.log(e.data);
             let reading_grade_level = e.data;
             console.log(reading_grade_level)
+            setReadingGradeLevel(parseInt(reading_grade_level))
+
         };
     
         ws.onerror = e => {
@@ -60,6 +63,9 @@ function ActivityPage () {
 
             </fieldset>
         </form>
+        {reading_grade_level !== '' &&
+            <div className='rgl_display'>The Reading Grade Level of this text is {reading_grade_level}</div>
+        }
         </>
     );
 

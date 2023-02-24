@@ -13,6 +13,9 @@
           /* ...or hosted services like Google Fonts  */
           @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
           
+          
+          @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
 
           /*@import '../node_modules/modern-normalize/modern-normalize.css'
           /* npm install modern-normalize 
@@ -26,17 +29,17 @@
 
 /*   ----- Variables  -----  */
 :root {
-  --custom-color-green:rgb(26, 83, 92);
+  --custom-color-brown:rgb(66, 37, 2);
   --custom-color-turquoise:rgb(78, 205, 196);
   --custom-color-mint:rgb(247, 255, 247);
   --custom-color-pink:rgb(255, 107, 107);
-  --custom-color-yellow:rgb(254,250,224);
-  --custom-color-dark-red:rgb(221,161,94);
+  --custom-color-yellow:rgb(248, 243, 237);
+  --custom-color-dark-red:rgb(210,161,94);
 }
 
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       /* Can alternatively define in html {} or :root {} */
-  color:var(--custom-color-green);
+  color:var(--custom-color-brown);
   background-color:var(--custom-color-mint);
   font-family:'DM Sans', sans-serif;
   font-size:1em;
@@ -82,7 +85,7 @@ nav a {
   vertical-align:middle;
 }
 nav a:hover {
-  color:var(--custom-color-green); 
+  color:var(--custom-color-brown); 
   background-color:var(--custom-color-yellow);
   border:2px solid var(--custom-color-yellow);
   text-align:center;
@@ -99,7 +102,7 @@ nav a:hover {
 header {
   text-align:center;
   background-color: var(--custom-color-turquoise);
-  color: var(--custom-color-green);
+  color: var(--custom-color-brown);
   border: 2em;
   font-size: medium;
   font-weight: 100;
@@ -109,7 +112,7 @@ header {
 main {
   text-align:center;
   background-color: var(--custom-color-turquoise);
-  color: var(--custom-color-green);
+  color: var(--custom-color-brown);
   font-size: medium;
   border: 2em;
   margin:2em;
@@ -126,7 +129,7 @@ aside {}
 footer {
   text-align:center;
   /* background-color: var(--custom-color-yellow); */
-  color: var(--custom-color-green);
+  color: var(--custom-color-brown);
   border: 0.5em;
   font-size: medium;
   font-weight: 100;
@@ -264,7 +267,7 @@ button:focus {
   
 }
   input {
-    color:var(--custom-color-green);
+    color:var(--custom-color-brown);
     background-color:whitesmoke;
     font-family: 'DM Sans', sans-serif;;
     font-size:1em;
@@ -277,7 +280,7 @@ button:focus {
   meter {}
   progress {}
   select {
-    color:var(--custom-color-green);
+    color:var(--custom-color-brown);
     background-color:var(--custom-color-yellow);
     font-family: 'DM Sans', sans-serif;
     font-size:1em;
