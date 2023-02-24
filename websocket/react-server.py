@@ -42,7 +42,7 @@ def reading_analyzer(text):
             count_sentences, count_words = 0, 0
     ave_sentences = sum(sentences_perhundred) / len(sentences_perhundred)
 
-    return 0.0588*ave_letters - 0.296*ave_sentences - 15.8
+    return str(0.0588*ave_letters - 0.296*ave_sentences - 15.8)
 
 
 async def main():
