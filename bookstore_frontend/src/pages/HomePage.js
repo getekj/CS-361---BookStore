@@ -24,6 +24,7 @@ function HomePage () {
                 <p> New Books Featured This Week </p>
             </div>
             <img src={Annhilation} alt="Annhilation Book Cover"></img>
+            
             <SearchBar/>
         </div>
 

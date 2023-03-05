@@ -17,7 +17,7 @@
     float: right;
 }
 
-.featured p {
+.featured-text-wrapper p {
     font-size: 3em;
     font-family: 'Merriweather', serif;
     text-align: left;

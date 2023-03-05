@@ -40,7 +40,7 @@
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 body {       /* Can alternatively define in html {} or :root {} */
   color:var(--custom-color-brown);
-  background-color:var(--custom-color-mint);
+  background-color:var(--custom-color-yellow);
   font-family:'DM Sans', sans-serif;
   font-size:1em;
   padding:1%;
@@ -185,14 +185,14 @@ table {
   border-collapse:collapse;
   text-align:left;
   table-layout: auto;
-  border:2px solid var(--custom-color-dark-red);
+  border:2px solid var(--custom-color-brown);
   width:95%;
   margin:0 auto;
   padding:1%;
 }
 caption {
-  background-color:var(--custom-color-dark-red);  
-  border:2px var(--custom-color-dark-red);  
+  background-color:var(--custom-color-brown);  
+  border:2px var(--custom-color-brown);  
   color:var(--custom-color-yellow);
   font-weight:bold;
   padding:1% 0;
@@ -201,18 +201,18 @@ thead {}
 tbody {}
 tfoot {}
 tr {
-  border:1px solid var(--custom-color-dark-red);
+  border:1px solid var(--custom-color-brown);
   background-color:var(--custom-color-yellow);
   padding:1%;
   text-align:center;
 }
   tr:nth-child(even) {}
 th {
-  border:1px solid var(--custom-color-dark-red);
+  border:1px solid var(--custom-color-brown);
   padding:1%;
 }
 td {
-  border:1px solid var(--custom-color-dark-red);
+  border:1px solid var(--custom-color-brown);
   background-color:var(--custom-color-yellow);
   padding:1%;
   text-align:center;
@@ -236,8 +236,8 @@ label {
   margin-top:20px;
 }
  button {
-  background-color: var(--custom-color-dark-red);
-  border: 1px solid var(--custom-color-dark-red);
+  background-color: var(--custom-color-yellow);
+  border: 1px solid var(--custom-color-brown);
   border-radius: 8px;
   box-sizing: border-box;
   color: black;
@@ -263,7 +263,8 @@ label {
 
 button:hover,
 button:focus {
-  background-color: var(--custom-color-yellow);
+  background-color: var(--custom-color-brown);
+  color: var(--custom-color-yellow);
   
 }
   input {
