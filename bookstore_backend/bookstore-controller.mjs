@@ -59,6 +59,16 @@ app.get('/books/:_id', (req, res) => {
 
 });
 
+// get books by name
+// app.get('/books/:_name', asyncHandler(async(req, res) => {
+//     const filter = {name: req.query.name};
+//     // if (req.query.name !== undefined) {
+//     //     filter.name = req.query.name;
+//     // }
+//     const result = await books.findBookByName(filter);
+//     res.send(result);
+// }));
+
 // PUT to update a book
 app.put('/books/:_id', (req, res) => {
     books.replaceBook(

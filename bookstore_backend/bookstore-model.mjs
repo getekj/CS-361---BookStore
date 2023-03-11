@@ -55,6 +55,11 @@ const findBookById = async (_id) => {
     return query.exec();
 }
 
+// const findBookByName = async (filter) => {
+//     const query = Book.find(filter)
+//     return query.exec()
+// }
+
 // REPLACE model for updating books in databse
 const replaceBook = async (_id, name, author, price, stock, description) => {
     const result = await Book.replaceOne({_id: _id }, {

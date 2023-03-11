@@ -1,4 +1,5 @@
 import React from 'react';
+// import { useEffect, useState } from 'react';
 import UpdateCatalogButton from '../components/UpdateCatalogButton';
 import HomeButton from '../components/HomeButton';
 import ActivityButton from '../components/ActivityButton';
@@ -7,7 +8,9 @@ import "./HomePage.css";
 import Annhilation from '../components/Annhilation.png';
 import SearchBar from '../components/SearchBar';
 
-function HomePage () {
+function HomePage ({setBookTitle}) {
+
+
     return (
         <>
         <h1 className='bookstore_title'> Logos BookStore </h1>
@@ -25,7 +28,7 @@ function HomePage () {
             </div>
             <img src={Annhilation} alt="Annhilation Book Cover"></img>
             
-            <SearchBar/>
+            <SearchBar setBookTitle={setBookTitle}/>
         </div>
 
         </>
