@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import HomeButton from '../components/HomeButton';
 
 function ActivityPage () {
 
@@ -50,6 +51,7 @@ function ActivityPage () {
                     value={reading_text}
                     onChange={e => setReadingText(e.target.value)}
                     id="reading_text"
+                    size="75"
                     required
                 />
 
@@ -66,6 +68,7 @@ function ActivityPage () {
         {reading_grade_level !== '' &&
             <div className='rgl_display'>The Reading Grade Level of this text is {reading_grade_level}</div>
         }
+        <HomeButton/>
         </>
     );
 

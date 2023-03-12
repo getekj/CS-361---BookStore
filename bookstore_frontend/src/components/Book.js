@@ -10,7 +10,7 @@ function Book({ book, onEdit, onDelete}) {
             <td>{book.stock}</td>
             <td>{book.description}</td>
             <td><MdOutlineEdit onClick={() => onEdit(book)} /></td>
-            <td><MdDeleteForever onClick={() => onDelete(book._id)}/></td>
+            <td><MdDeleteForever onClick={() => { if (window.confirm(`Are you sure you wish to delete ${book.name} and return home?`)) onDelete(book._id)}} /></td>
         </tr>
     );
 }

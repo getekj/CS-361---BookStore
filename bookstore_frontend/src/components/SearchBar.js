@@ -13,7 +13,7 @@ function SearchBar ({setBookTitle}) {
     }
 
     return (
-        <div className="search-bar-wrapper">
+        // <div className="search-bar-wrapper">
             <div className="search-field">
             <form onSubmit={(e) => {e.preventDefault();}}>
                 <input 
@@ -34,7 +34,7 @@ function SearchBar ({setBookTitle}) {
             </form>
             </div>
 
-        </div>
+        // </div>
     )
 };
 

@@ -22,7 +22,7 @@ function ViewTablePage () {
 
     return (
         <>
-        <h1>THIS IS VIEW TABLE PAGE</h1>
+        <h1>Browse the Full Catalog</h1>
         <table id="books">
             <caption>Here is a list of all the books in the catalog</caption>
             <thead>

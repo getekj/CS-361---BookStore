@@ -28,6 +28,8 @@ function AddOrUpdatePage ( {setBook} ) {
     
         // Delete a book
         const onDelete = async _id => {
+            console.log("inside on delete")
+            navigate("/")
             const response = await fetch(`http://localhost:3000/books/${_id}`, { method: 'DELETE' });
             if (response.status === 204) {
                 const getResponse = await fetch('/books');
@@ -36,7 +38,6 @@ function AddOrUpdatePage ( {setBook} ) {
             } else {
                 console.error(`Failed to delete book with _id = ${_id}, status code = ${response.status}`)
             }
-            navigate("/")
         }
 
         // LOAD the books

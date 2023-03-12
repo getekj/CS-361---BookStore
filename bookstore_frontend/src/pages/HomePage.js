@@ -7,13 +7,14 @@ import ViewTableButton from '../components/ViewTableButton';
 import "./HomePage.css";
 import Annhilation from '../components/Annhilation.png';
 import SearchBar from '../components/SearchBar';
+import { FaGlasses } from 'react-icons/fa';
 
 function HomePage ({setBookTitle}) {
 
 
     return (
         <>
-        <h1 className='bookstore_title'> Logos BookStore </h1>
+        <h1 className='bookstore_title'> Logos BookStore <FaGlasses/> </h1>
 
         <div className='buttons-list'>
             <HomeButton/>
@@ -24,13 +25,12 @@ function HomePage ({setBookTitle}) {
 
         <div className='featured'>
             <div className='featured-text-wrapper'>
-                <p> New Books Featured This Week </p>
+                <h3> Check out our new featured book! Use the search below</h3>
+                {/* <p> Search through our catalog</p> */}
             </div>
             <img src={Annhilation} alt="Annhilation Book Cover"></img>
-            
             <SearchBar setBookTitle={setBookTitle}/>
         </div>
-
         </>
 
     );
